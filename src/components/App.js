@@ -1,11 +1,17 @@
-import React ,{useRef,useState,useEffect} from 'react'
+ import React ,{useRef,useState,useEffect} from 'react'
 import '../styles/App.css';
 import InputField from './InputField.js';
 const App = () => {
  
-//code here 
+const newRef=useRef();
+const [values,setValues]=useState("");
 
-
+const focusInput = () => {
+  newRef.current.focus();
+};
+const settingValue=()=>{
+  setValues(newRef.current.value);
+}
  
   return (
     <div>
